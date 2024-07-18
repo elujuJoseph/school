@@ -1,88 +1,67 @@
-
-Copy code
 body {
     font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: aqua;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.nav-links {
+nav ul {
     list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 1rem;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.hero {
-    background: url('school.jpg') no-repeat center center/cover;
-    height: 500px;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #1fcf5a;
-    text-align: center;
-    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
 }
 
 section {
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1em;
+}
+
+.pet {
+    display: grid;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.pet img {
+    width: 150px;
+    height: 150px;
+    margin-right: 1em;
 }
 
 footer {
-    background: #922e2e;
-    color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
+@media (max-width: 600px) {
+    .pet {
+        flex-direction: grid;
+        text-align: center;
+    }
 
-form label {
-    margin: 0.5rem 0 0.25rem;
-}
-
-form input, form textarea {
-    padding: 0.5rem;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 0.75rem;
-    margin-top: 1rem;
-    background: #bd4444;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    .pet img {
+        margin-bottom: 0.5em;
+    }
 }
